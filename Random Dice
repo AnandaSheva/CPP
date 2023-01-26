@@ -1,0 +1,34 @@
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+int main(){
+	int pil, player, enemy;
+	string ulang;
+		cout<<"1. Lempar Dadu\n2. Keluar\npilihan : ";
+		cin>>pil;
+		do{
+			system("cls");
+			if(pil == 1){
+			player = (rand() % 6) + 1;
+			enemy = (rand() % 6) + 1;
+			cout<<"anda :"<<player<<endl;
+			cout<<"lawan :"<<enemy<<endl ;
+			if(player > enemy){
+				cout<<"Anda Menang "<<endl;
+			} else if(player < enemy){
+				cout<<"Anda Kalah "<<endl;
+			} else{
+				cout<<"seri "<<endl;
+			}
+			cout<<"Ulang <y/n> : "; cin>>ulang;
+	} else if (pil == 2){
+		ulang = "n";	
+	} else {
+		cout<<"Pilihan yang anda masukkan salah "<<endl;
+	}
+} while (ulang == "y");
+system("cls");
+cout<<"Program Selesai"<<endl;
+
+}
